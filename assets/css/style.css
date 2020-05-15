@@ -1,11 +1,35 @@
+.jumbotron {
+    padding-top: 12vh;
+}
+
 #multipleDevices {
     height: 28vw;
 }
 
 .keywords {
     font-size: 56px;
+    color: #2A2871;
 }
 
 .carousel-item p {
     font-size: 28px;
+}
+
+#advocates {
+    display: flex;
+    flex-direction: row;
+}
+
+.clientLogo {
+    align-items: center;
+    max-width: 80%;
+    opacity: .75;
+}
+
+.fixed-bottom {
+    height: 300px;
+    background-image: url("/assets/images/enpiraFooterArtboard.png");
+    background-position: center;
+    background-size: contain;
+    background-blend-mode: soft-light;
 }
