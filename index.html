@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enpira</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-zrnmn8R8KkWl12rAZFt4yKjxplaDaT7/EUkKm7AovijfrQItFWR7O/JJn4DAa/gx" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -55,8 +54,8 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav justify-content-end">
-                    <li id="loginBtn" class="nav-item">
-                        <a class="nav-link" href="#">Sign in</a>
+                    <li class="nav-item">
+                        <a id="loginBtn" class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">Sign in</a>
                     </li>  
                 </ul>
             </div>
@@ -64,6 +63,39 @@
     </header>
     
     <main>
+      <!-- Login modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header text-white bg-primary">
+              <h5 class="modal-title" id="exampleModalLabel">Sign in</h5>
+              <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                  <a href="#">
+                    <small id="emailHelp" class="form-text text-muted">
+                      Forget your password?
+                    </small>
+                  </a>
+                </div>
+                <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
         <!-- Branding, tagline, and showcase -->
         <div class="jumbotron">
             <div class="row">
@@ -175,81 +207,15 @@
               </div>
         </section>
 
-        <!-- Advocates or existing clients? -->
-        <div id="advocates" class="card bg-dark text-white" style="margin-bottom: 15vh; height: 340px;">
-            <div class="card-img-overlay">
-              <div class="row">
-                <h4 class="card-title text-muted">Advocated by:</h4>
-                <div class="col col-md-2 offset-md-2">
-                  <img class="clientLogo" src="./assets/images/dconc.png">
-                </div>
-                <div class="col col-md-3 offset-md-2">
-                  <img class="clientLogo" src="./assets/images/oc.png">
-                </div>
-              </div>
-            </div>
-        </div>
-
-        <!-- Testimonials -->
-        <section class="container">
-            <div class="card" style="margin-bottom: 20vh;" id="testimonial1">
-                <!-- <div class="card-header">
-                  Quote
-                </div> -->
-                <div class="card-body">
-                  <blockquote class="blockquote mb-0">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante!</p>
-                    <footer class="blockquote-footer">Tobin Freid | <cite title="Source Title">Sustainability Manager at Durham County Government</cite></footer>
-                  </blockquote>
-                </div>
-            </div>
-            <div class="card" style="margin-bottom: 10vh; display: none;" id="testimonial2">
-              <!-- <div class="card-header">
-                Quote
-              </div> -->
-              <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  <footer class="blockquote-footer">John Doe | <cite title="Source Title">Blue Ridge Energy</cite></footer>
-                </blockquote>
-              </div>
-          </div>
-          <div class="card" style="margin-bottom: 10vh; display: none;" id="testimonial3">
-            <!-- <div class="card-header">
-              Quote
-            </div> -->
-            <div class="card-body">
-              <blockquote class="blockquote mb-0">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                <footer class="blockquote-footer">Jane Doe | <cite title="Source Title">Town of Erehwon</cite></footer>
-              </blockquote>
-            </div>
-        </div>
-        </section>
-
-        <!-- Sign in modal -->
-        <!-- <div id="loginModal" class="modal-dialog modal-dialog-centered">
-          <form>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-        </div> -->
     </main>
 
     <footer>
       <nav class="mt-auto bg-dark">
         <!-- <a class="navbar-brand text-white" href="#"><img src="./assets/images/enpiraWhiteLogo.png" height="50px"></a> -->
-        <p class="text-white text-center">©2020 Enpira Inc. All Rights Reserved.</p>
+        <p class="text-white text-center" style="padding-top: 15px;">©2020 Enpira Inc. All Rights Reserved.</p>
         <p class="text-muted text-center" style="margin-bottom: 0;">
           <a class="text-muted" href="#">Privacy Policy</a> |
-          <a class="text-muted" href="#">Something Else</a>
+          <a class="text-muted" href="#">Terms & Conditions</a>
         </p>  
       </nav>
     </footer>
